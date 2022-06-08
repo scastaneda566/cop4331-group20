@@ -1,10 +1,11 @@
 <?php
 	$inData = getRequestInfo();
+	$userId = $inData["userId"];
 	
-	$Name = $inData["Name"];
-	$UserId = $inData["UserId"];
-	$Phone = $inData["Phone"];
-	$Email = $inData["Email"];
+	$newFirstName = $inData["newFirstName"];
+	$newLastName = $inData["newLastName"];
+	$newPhone = $inData["newPhone"];
+	$newEmail = $inData["newEmail"];
 
 	$conn = new mysqli("localhost", "root", "Current-Root-Password", "COP4331");
 	if ($conn->connect_error) 
@@ -13,12 +14,12 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("INSERT into Contacts (Name ,Phone , Email, UserId) VALUES(?,?,?,?)");
-		$stmt->bind_param("sssi", $Name, $Phone, $Email, $userId);
+		$stmt = $conn->prepare("UPDATE Contacts SET FirstName=?, LastName=?, Phone=?, Email=? WHERE ID=?");
+		$stmt->bind_param("ssssi", $newFirstName, $newLastName, $newPhone, $newEmail, $userId);
 		$stmt->execute();
 		$stmt->close();
 		$conn->close();
-		returnWithError("Contact Added");
+		returnWithError("");
 	}
 
 	function getRequestInfo()
