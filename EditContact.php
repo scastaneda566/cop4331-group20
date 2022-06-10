@@ -2,8 +2,7 @@
 	$inData = getRequestInfo();
 	$userId = $inData["userId"];
 	
-	$newFirstName = $inData["newFirstName"];
-	$newLastName = $inData["newLastName"];
+	$newName = $inData["newName"];
 	$newPhone = $inData["newPhone"];
 	$newEmail = $inData["newEmail"];
 
@@ -14,12 +13,12 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("UPDATE Contacts SET FirstName=?, LastName=?, Phone=?, Email=? WHERE ID=?");
-		$stmt->bind_param("ssssi", $newFirstName, $newLastName, $newPhone, $newEmail, $userId);
+		$stmt = $conn->prepare("UPDATE Contacts SET Name='".$newName."', Phone='".$newPhone."', Email='".$newEmail."' WHERE ID='".$userId."'");
+		//$stmt->bind_param("sssi", $newName, $newPhone, $newEmail, $userId);
 		$stmt->execute();
 		$stmt->close();
 		$conn->close();
-		returnWithError("");
+		returnWithError("Contact Edited");
 	}
 
 	function getRequestInfo()
