@@ -13,7 +13,7 @@
 	}
 	else
 	{
-		$stmt = $conn->prepare("DELETE FROM Contacts WHERE id=? AND userId=?");
+		$stmt = $conn->prepare("DELETE FROM Contacts WHERE ID=? AND UserID=?");
 		$stmt->bind_param("ii", $id, $userId);
 		$stmt->execute();
 		$stmt->close();
