@@ -1,6 +1,6 @@
 <?php
 	$inData = getRequestInfo();
-	$userId = $inData["userId"];
+	$userId = $inData["UserID"];
 	
 	$Name = $inData["newName"];
 	$Phone = $inData["newPhone"];
@@ -13,9 +13,9 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("UPDATE Contacts ID SET Name = ?, Phone = ?, Email = ? WHERE ID = ? AND UserID = ?");
+		$stmt = $conn->prepare("UPDATE Contacts SET Name = ?, Phone = ?, Email = ? WHERE ID = ? AND UserID = ?");
 		$stmt->bind_param("sssii", $Name, $Phone, $Email, $inData["ID"], $userId);
-		
+		$stmt->debugDumpParams();
 		$stmt->execute();
 		$stmt->close();
 		$conn->close();
