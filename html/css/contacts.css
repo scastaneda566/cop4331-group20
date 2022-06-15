@@ -1,0 +1,311 @@
+body {
+    margin-top: 7px;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size:cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    width: 98%;
+}
+
+table, th, td {
+    border: 2px solid;
+    border-collapse: collapse;
+    border-color: rgb(16, 109, 230);
+    margin-top:5px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+th {
+    font-size: 22px;
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+td {
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+.white-box {
+    background-color:white;
+    margin-left:auto;
+    margin-right:auto;
+    width: 60%;
+    padding-bottom: 15%;
+}
+
+.result {
+    display:none;
+    text-align:center;
+    padding-left:20%;
+}
+
+.button {
+    margin-left: 42%;
+    margin-bottom: 4%;
+    width: 15%;
+    height: 40px;
+    font-size: 16px;
+    background-color: rgb(16, 109, 230);
+    color: white;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: rgb(15, 87, 180);
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 35px;
+  border: 4px solid;
+  border-color: rgb(16, 109, 230);
+  border-radius:5px;
+  background-color: rgb(255, 255, 255);
+  z-index: 9;
+  width: 20%;
+}
+
+.form-popup2 {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 35px;
+    border: 4px solid;
+    border-color: rgb(16, 109, 230);
+    border-radius:5px;
+    background-color: rgb(255, 255, 255);
+    z-index: 9;
+    width: 20%;
+  }
+
+/* Add styles to the form container */
+.form-container {
+    padding: 10px;
+    background-color: white;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+h1 {
+    display:inline;
+    top: 5px;
+    text-align: center;
+    color: rgb(16, 109, 230);
+}
+
+h2 {
+    padding-top: 5%;
+    text-align: center;
+    color: rgb(16, 109, 230);
+}
+
+/* Set a style for the submit/login button */
+.btn {
+    margin-bottom: 4%;
+    margin-left:31%;
+    width: 38%;
+    height: 40px;
+    font-size: 16px;
+    background-color: rgb(16, 109, 230);
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: rgb(15, 87, 180);
+}
+
+.closeBtn {
+    position: fixed;
+    font-size:16px;
+    top:20px;
+    left: 20%;
+    background-color: red;
+    border-radius:5px;
+}
+
+.closeBtn:hover {
+    background-color: rgb(161, 0, 0);
+}
+
+.closeBtn2 {
+    position: fixed;
+    font-size:16px;
+    top:20px;
+    right: 2.2%;
+    background-color: red;
+    border-radius:5px;
+}
+
+.closeBtn2:hover {
+    background-color: rgb(161, 0, 0);
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+#name, #email, #phone, #name2 {
+    margin-bottom: 3%;
+    display:block;
+    width: 100%;
+    height:25px;
+    text-align:center;
+    font-size:16px;
+}
+
+#name2, #email2, #phone2 {
+    margin-bottom: 3%;
+    display:block;
+    width: 100%;
+    height:25px;
+    text-align:center;
+    font-size:16px;
+}
+
+input[type=text] {
+    width: 94%;
+    height:25px;
+    text-align:center;
+    font-size:16px;
+}
+.srch {
+    display:inline;
+    margin-left: 11%;
+    margin-bottom: 4%;
+}
+#search {
+    width: 47%;
+    border-width:3px;
+    border-color: rgb(16, 109, 230);
+    text-align:center;
+    font-size:16px;
+    height: 27px;
+}
+
+#newbutton {
+    width: 150px;
+    font-size: 16px;
+    background-color: rgb(16, 109, 230);
+    color: white;
+    height: 35px;
+}
+
+#srchbutton {
+    width: 150px;
+    font-size: 16px;
+    background-color: rgb(16, 109, 230);
+    color: white;
+    height: 35px;
+}
+
+#search, #srchbutton {
+    display:inline;
+    
+}
+
+#srchbutton:hover, #newbutton:hover {
+    background-color: rgb(15, 87, 180);
+}
+
+#editButton {
+    margin-left:30%;
+    width: 42%;
+    height: 27px;
+    font-size: 14px;
+    background-color: rgb(16, 109, 230);
+    color: white;
+    border-radius: 3px;
+}
+
+#editButton:hover {
+    background-color: rgb(15, 87, 180);
+}
+
+#deleteButton {
+    text-align: center;
+    margin-left: 1%;
+    padding-right:0;
+    width: 55%;
+    height: 27px;
+    font-size: 14px;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+}
+
+#deleteButton:hover {
+    background-color: rgb(161, 0, 0);
+}
+
+.tableName {
+    width: 20%;
+}
+
+.tableEmail {
+    width: 25%;
+}
+
+.tablePhone {
+    width: 20%;
+}
+
+.tableControls {
+    width:12%;
+    padding-right:0px;
+}
+
+#userName {
+    float:right;
+    margin-top: 7px;
+    margin-right: 2%;
+}
+
+#logoutButton {
+    margin-left: 90%;
+    margin-bottom:5%;
+    width: 9%;
+    height: 30px;
+    font-size: 14px;
+    background-color: rgb(16, 109, 230);
+    color: white;
+    border-radius: 5px;
+}
+
+#logoutButton:hover {
+    background-color: rgb(15, 87, 180);
+}
+
+#contactTitle {
+    padding-top: 2%;
+    display:inline;
+    padding-left: 30%;
+}
+
+#deleteBtn {
+    background-color: red;
+}
+
+#deleteBtn:hover {
+    background-color: rgb(161, 0, 0);
+}
+
+#contactID {
+    display:none;
+}
+

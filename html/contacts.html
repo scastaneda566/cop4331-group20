@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Manager</title>
+        <link rel="stylesheet" type="text/css" href="css/contacts.css">
+        <link rel="icon" href="images/poggers.webp">
+        <script type="text/javascript" src="js/code.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() 
+            {
+                readCookie();
+            }, false);
+        </script>
+    </head>
+
+    <body onload=searchContact();>
+        <div class="white-box">
+            <div class="userlog">
+                <span id="contactTitle"><h1><b>Group 20's Contact Manager</b></h1></span><span id="userName"></span><button type="button" id="logoutButton" onclick="doLogout();">Sign Out</button>
+            </div> 
+            <div class="srch">
+                <button type="button" id="newbutton" onclick="openForm();">Add New Contact</button>
+                <input type="text" id="search" placeholder="Search Contacts" name="search">
+                <button type="button" id="srchbutton" onclick="searchContact();">Search</button>
+            </div>
+
+            <div class="form-popup" id="myForm">
+                <form class="form-container">
+                    <button type="button" class="closeBtn" onclick="closeForm();"><b>&#10006</b></button>
+                    <h2>Enter New Contact Information</h2>
+                    
+                    <label><b>Name</b></label>
+                    <input type="text" id=name placeholder="Name" required>
+
+                    <label><b>Email</b></label>
+                    <input type="text" id=email placeholder="Email" required>
+                
+                    <label><b>Phone Number</b></label>
+                    <input type="text" id=phone placeholder="Phone Number" required>
+                
+                    <button type="button" class="btn" onclick="addContact();">Add Contact</button>
+                    <div id="contactAddResult"></div>
+                </form>
+            </div>
+                
+            <table id="contactList2">
+                <span id="contactSearchResult"></span>
+            </table>
+
+            <table id="contactList">
+                <colgroup>
+                    <col class="tableName" />
+                    <col class="tableEmail" />
+                    <col class="tablePhone" />
+                    <col class="tableControls" />
+                </colgroup>
+            </table>
+
+            <div class="form-popup2" id="myForm2">
+                <form class="form-container">
+                    <button type="button" class="closeBtn2" onclick="closeForm2();"><b>&#10006</b></button>
+                    <h2>Edit Contact Information</h2>
+                    
+                    <label><b>Name</b></label>
+                    <input type="text" id="name2" placeholder="Name" required>
+
+                    <label><b>Email</b></label>
+                    <input type="text" id="email2" placeholder="Email" required>
+                
+                    <label><b>Phone Number</b></label>
+                    <input type="text" id="phone2" placeholder="Phone Number" required>
+                
+                    <button type="submit" class="btn" onclick="editContact();">Update Contact</button>
+                    <button type="button" class="btn" id="deleteBtn" onclick="deleteContact();">Delete Contact</button>
+                    <div id="contactDeleteResult"></div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
